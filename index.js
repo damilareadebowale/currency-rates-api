@@ -3,6 +3,10 @@ const axios = require('axios');
 const app = express();
 
 let port = process.env.PORT || 5000;
+
+app.get('/', (req, res) => {
+  res.send("For the currency exchange rates visit https://young-ocean-86160.herokuapp.com/api/rates");
+});
  
 app.get('/api/rates', (req, res) => {
   axios.get('https://api.exchangeratesapi.io/latest?base=CZK&symbols=EUR,GBP,USD')
