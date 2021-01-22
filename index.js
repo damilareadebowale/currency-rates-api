@@ -5,7 +5,7 @@ const app = express();
 let port = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
-  res.send("For the currency exchange rates visit https://young-ocean-86160.herokuapp.com/api/rates");
+  res.send(`<p>For the currency exchange rates API <a href="https://young-ocean-86160.herokuapp.com/api/rates/">Click here!</a></p>`);
 });
  
 app.get('/api/rates', (req, res) => {
